@@ -1,0 +1,541 @@
+extends ./layout/layout.pug
+
+block content
+
+  .container
+    .row
+      .col-md-3.col-md-offset-1
+        nav.left
+          h4 Discussions
+            a(href='', data-toggle='tooltip', data-placement='auto', title='Add New Discussion')
+              i.fa.fa-plus
+            //- a
+          //- h4
+          .search-dis
+            input(type='text', placeholder='Search...')
+          //- search-dis
+          ul.class
+            li
+              a(href='') LBTST Forum Class 1
+              ul
+                li
+                  a(href='') Homework 1
+                //- li
+                li.active
+                  a(href='') Homework 2
+                //- li
+              //- ul
+            //- li
+            li
+              a(href='') LBTST Forum Class 2
+              ul
+                li
+                  a(href='') Homework 3
+                //- li
+                li
+                  a(href='') Homework 4
+                //- li
+              //- ul
+            //- li
+            li
+              a(href='') LBTST Forum Class 3
+              ul
+                li
+                  a(href='') Homework 5
+                //- li
+                li
+                  a(href='') Homework 6
+                //- li
+              //- ul
+            //- li
+          //- ul
+          h4 Contacts
+          ul.contacts
+            li
+              a(href='')
+                img(src='//placehold.it/25')
+                span David Dodgson
+            //- li
+            li
+              a(href='')
+                img(src='//placehold.it/25')
+                span Jassim Ali Jassim
+            //- li
+            li
+              a(href='')
+                img(src='//placehold.it/25')
+                span Mary LB
+            //- li
+          //- ul
+        //- nav
+      //- col
+      .col-md-7
+        .heading
+          .filter
+            span.display 1-10 of 15
+            .btn-group
+              button.btn.btn-default.btn-sm.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                | All
+                span.caret
+              ul.dropdown-menu.pull-right
+                li.dropdown-header Filter type by
+                //- li
+                li.divider
+                li
+                  a(href='') All
+                //- li
+                li
+                  a(href='') Message
+                //- li
+                li
+                  a(href='') Event
+                //- li
+                li
+                  a(href='') File
+                //- li
+              //- ul
+            //- btn-group
+          //- filter
+          h2.title Homework 2
+        //- heading
+        .card.raised
+          .card-padding
+            .composer
+              ul.nav.nav-tabs(role='tablist')
+                li.active(role='presentation')
+                  a(href='#tabPost', aria-controls='tabPost', role='tab', data-toggle='tab') Post
+                li(role='presentation')
+                  a(href='#tabEmail', aria-controls='tabEmail', role='tab', data-toggle='tab') Email
+                li(role='presentation')
+                  a(href='#tabUpload', aria-controls='tabUpload', role='tab', data-toggle='tab') File Upload
+                li(role='presentation')
+                  a(href='#tabEvents', aria-controls='tabEvents', role='tab', data-toggle='tab') Events
+              //- ul
+              .tab-content
+                #tabPost.tab-pane.active(role='tabpanel')
+                  .form-group
+                    textarea.form-control(placeholder='Write something...', rows="5")
+                  //- form-group
+                  .buttons
+                    span.icons
+                      a.pull-left(href='', data-toggle='tooltip', data-placement='auto', title='Attach File')
+                        i.fa.fa-paperclip
+                      //- a
+                    //- icons
+                    a.btn.btn-primary.btn-sm(href='') Post
+                  //- buttons
+                //- tab-pane
+                #tabEmail.tab-pane(role='tabpanel')
+                  br
+                  .table-responsive
+                    table.table.table-bordered
+                      thead
+                        tr
+                          th(width='20')
+                            input(type='checkbox')
+                          th Select All
+                        //- tr
+                      //- thead
+                      tbody
+                        tr
+                          td
+                            input(type='checkbox')
+                          //- td
+                          td David Dodgoson
+                        //- tr
+                        tr
+                          td
+                            input(type='checkbox')
+                          //- td
+                          td Jassim Ali Jassim
+                        //- tr
+                        tr
+                          td
+                            input(type='checkbox')
+                          //- td
+                          td Mary LB
+                        //- tr
+                      //- tbody
+                    //- table
+                  //- table-responsive
+                  .form-group
+                    textarea.form-control(placeholder='Write something...', rows="5")
+                  //- form-group
+                  .buttons
+                    a.btn.btn-primary.btn-sm(href='') Send
+                  //- buttons
+                //- tab-pane
+                #tabUpload.tab-pane(role='tabpanel')
+                  .form-group
+                    label Topic
+                    select.form-control(disabled)
+                      option Topic
+                    //- select
+                  //- form-group
+                  .drop-area
+                    i.fa.fa-cloud-upload.fa-3x
+                    br
+                    span Drop files here to upload...
+                  //- drop-area
+                  .buttons
+                    a.btn.btn-primary.btn-sm(href='') Upload
+                  //- buttons
+                //- tab-pane
+                #tabEvents.tab-pane(role='tabpanel')
+                  .form-group
+                    label Topic
+                    select.form-control(disabled)
+                      option Topic
+                    //- select
+                  //- form-group
+                  .form-group
+                    textarea.form-control(placeholder='Event...', rows="5")
+                  //- form-group
+                  hr
+                  .checkbox
+                    label
+                      input(type='checkbox')
+                      | Milestone
+                    //- label
+                  //- checkbox
+                  .row
+                    .form-group.col-md-3
+                      label Start
+                      input.form-control(type='date', placeholder='start')
+                    //- form-group
+                    .form-group.col-md-3
+                      label End
+                      input.form-control(type='date', placeholder='end')
+                    //- form-group
+                  //- row
+                  .buttons
+                    a.btn.btn-primary.btn-sm(href='') Post
+                  //- buttons
+                //- tab-pane
+              //- tab-content
+            //- composer
+          //- card-padding
+        //- card
+
+        .card
+          .card-padding
+            .media
+              .media-left
+                a(href='#')
+                  img.media-object(src='//placehold.it/35', alt='...')
+                //- a
+              //- media-left
+              .media-body
+                strong.media-heading Jassim Ali Jassim
+                br
+                small 12 September at 09:17 AM
+                .post-content
+                  | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                //- post-content
+                .replies
+                  .media
+                    .media-left
+                      a(href='#')
+                        img.media-object(src='//placehold.it/25', alt='...')
+                      //- a
+                    //- media-left
+                    .media-body
+                      strong.media-heading Rodan Luzuriaga
+                      br
+                      span.votes
+                        span.likes
+                          a(href='')
+                            i.fa.fa-thumbs-up
+                          //- a
+                          small.count 1
+                        //- likes
+                      //- votes
+                      small.text-muted 44mins
+                      .post-content
+                        | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                      //- post-content
+                    //- media-body
+                  //- media
+                  .reply
+                    input(type='text', placeholder='Write a reply...')
+                    span.actions
+                      i.fa.fa-paperclip(data-toggle='tooltip', data-placement='auto', title='Attach File')
+                    //- span
+                  //- reply
+                //- replies
+              //- media-body
+            //- media
+            a.bookmark(href='', data-toggle='tooltip', data-placement='auto', title='bookmark this post')
+              i.fa.fa-bookmark
+            //- bookmark
+          //- card-padding
+          .reply
+            span.controls
+              span.votes
+                span.likes
+                  a(href='')
+                    i.fa.fa-thumbs-up
+                  //- a
+                  small.count 12
+                //- likes
+              //- votes
+              span.links
+                a(href='')
+                  i.fa.fa-pencil
+                  | Edit
+                //- a
+                a(href='')
+                  i.fa.fa-trash-o
+                  | Delete
+                //- a
+                a(href='')
+                  i.fa.fa-exclamation-triangle
+                  | Report Abusive
+                //- a
+              //- span
+              .clearfix
+            //- span
+            input(type='text', placeholder='Write a reply...')
+            span.actions
+              i.fa.fa-paperclip(data-toggle='tooltip', data-placement='auto', title='Attach File')
+            //- span
+          //- reply
+        //- card
+        .card
+          .card-padding
+            .media
+              .media-left
+                a(href='#')
+                  img.media-object(src='//placehold.it/35', alt='...')
+                //- a
+              //- media-left
+              .media-body
+                strong.media-heading Jassim Ali Jassim
+                br
+                small 12 September at 09:17 AM
+                .post-content
+                  | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                //- post-content
+                .replies
+                  .media
+                    .media-left
+                      a(href='#')
+                        img.media-object(src='//placehold.it/25', alt='...')
+                      //- a
+                    //- media-left
+                    .media-body
+                      strong.media-heading Rodan Luzuriaga
+                      br
+                      span.votes
+                        span.likes
+                          a(href='')
+                            i.fa.fa-thumbs-up
+                          //- a
+                          small.count 1
+                        //- likes
+                      //- votes
+                      small.text-muted 44mins
+                      .post-content
+                        | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                      //- post-content
+                    //- media-body
+                  //- media
+                  .reply
+                    input(type='text', placeholder='Write a reply...')
+                    span.actions
+                      i.fa.fa-paperclip(data-toggle='tooltip', data-placement='auto', title='Attach File')
+                    //- span
+                  //- reply
+                //- replies
+              //- media-body
+            //- media
+            a.bookmark(href='', data-toggle='tooltip', data-placement='auto', title='bookmark this post')
+              i.fa.fa-bookmark
+            //- bookmark
+          //- card-padding
+          .reply
+            span.controls
+              span.votes
+                span.likes
+                  a(href='')
+                    i.fa.fa-thumbs-up
+                  //- a
+                  small.count 12
+                //- likes
+              //- votes
+              span.links
+                a(href='')
+                  i.fa.fa-pencil
+                  | Edit
+                //- a
+                a(href='')
+                  i.fa.fa-trash-o
+                  | Delete
+                //- a
+                a(href='')
+                  i.fa.fa-exclamation-triangle
+                  | Report Abusive
+                //- a
+              //- span
+              .clearfix
+            //- span
+            input(type='text', placeholder='Write a reply...')
+            span.actions
+              i.fa.fa-paperclip(data-toggle='tooltip', data-placement='auto', title='Attach File')
+            //- span
+          //- reply
+        //- card
+        .card
+          .card-padding
+            .media
+              .media-left
+                a(href='#')
+                  img.media-object(src='//placehold.it/35', alt='...')
+                //- a
+              //- media-left
+              .media-body
+                strong.media-heading Jassim Ali Jassim
+                br
+                small 12 September at 09:17 AM
+                .post-content
+                  | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                //- post-content
+                .replies
+                  .media
+                    .media-left
+                      a(href='#')
+                        img.media-object(src='//placehold.it/25', alt='...')
+                      //- a
+                    //- media-left
+                    .media-body
+                      strong.media-heading Rodan Luzuriaga
+                      br
+                      span.votes
+                        span.likes
+                          a(href='')
+                            i.fa.fa-thumbs-up
+                          //- a
+                          small.count 1
+                        //- likes
+                      //- votes
+                      small.text-muted 44mins
+                      .post-content
+                        | Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                      //- post-content
+                    //- media-body
+                  //- media
+                  .reply
+                    input(type='text', placeholder='Write a reply...')
+                    span.actions
+                      i.fa.fa-paperclip(data-toggle='tooltip', data-placement='auto', title='Attach File')
+                    //- span
+                  //- reply
+                //- replies
+              //- media-body
+            //- media
+            a.bookmark(href='', data-toggle='tooltip', data-placement='auto', title='bookmark this post')
+              i.fa.fa-bookmark
+            //- bookmark
+          //- card-padding
+          .reply
+            span.controls
+              span.votes
+                span.likes
+                  a(href='')
+                    i.fa.fa-thumbs-up
+                  //- a
+                  small.count 12
+                //- likes
+              //- votes
+              span.links
+                a(href='')
+                  i.fa.fa-pencil
+                  | Edit
+                //- a
+                a(href='')
+                  i.fa.fa-trash-o
+                  | Delete
+                //- a
+                a(href='')
+                  i.fa.fa-exclamation-triangle
+                  | Report Abusive
+                //- a
+              //- span
+              .clearfix
+            //- span
+            input(type='text', placeholder='Write a reply...')
+            span.actions
+              i.fa.fa-paperclip(data-toggle='tooltip', data-placement='auto', title='Attach File')
+            //- span
+          //- reply
+        //- card
+      //- col
+    //- row
+    a.backtotop(href='#', alt='back to top', title='back to top')
+      i.fa.fa-chevron-circle-up
+    //- a
+    a.quickupload(href='', alt='Quick upload', title='Quick upload')
+      span.fa-stack.fa-lg
+        i.fa.fa-cube.fa-stack-2x
+        i.fa.fa-arrow-down.fa-stack-1x.fa-inverse
+    //- a
+  //- container
+
+block scripts
+  // External Script goes here...
+  script.
+    $(document).ready(function() {
+
+      $(window).on('scroll resize', function() {
+        var st = $(this).scrollTop();
+        var navOffsetTop = $('.steadybird').offset().top;
+        //- console.log(st + ':' + navOffsetTop)
+        if ($(this).width() >= 767) {
+          if (st >= navOffsetTop) {
+            $('.steadybird').addClass('fixed');
+            $('body').css('margin-top', $('.navbar-header').height());
+          }
+          if (st < $('.navbar-header').height()) {
+            $('.steadybird').removeClass('fixed');
+            $('body').css('margin-top', '');
+          }
+        }
+      });
+
+      //- init Tooltip
+      $("[data-toggle='tooltip']").tooltip();
+
+      //- focus composer
+      $('.raised').on('focus keydown', 'input, textarea', function(e) {
+        var modal;
+        $('.post-overlay').css('display', function() {
+
+          modal = true;
+          raise(modal);
+
+          $('.post-overlay').click(function() {
+            $(this).hide();
+            modal = false;
+            raise(modal);
+          });
+          return 'block';
+        });
+        if (e.keyCode == 27) {
+          $('.post-overlay').hide();
+          modal = false;
+          raise(modal);
+          $(this).blur();
+        }
+      });
+
+      function raise(obj) {
+        if (obj) {
+          $('nav.navbar').css('z-index', '1');
+          $('.raised').css('z-index', '1003');
+        } else {
+          $('nav.navbar').css('z-index', '');
+          $('.raised').css('z-index', '');
+        }
+      }
+
+    });

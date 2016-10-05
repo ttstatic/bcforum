@@ -1,0 +1,74 @@
+.search-bar
+  .container
+    .form-search
+      input(type='text', placeholder='Search')
+      a(href='')
+        i.fa.fa-search
+      //- a
+    //- form-group
+  //- container
+//- search-bar
+nav.navbar.navbar-default.navbar-static-top
+  .navbar-header
+    .container
+      .row
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        //- button
+        a.navbar-brand(href='#')
+          img(src="assets/images/logo-bc.png")
+        //- a
+        a.navbar-brand(href='#')
+          img(src="assets/images/logo-80th.png")
+        //- a
+        ul.nav.navbar-nav.hidden-xs.hidden-sm
+          li.navbar-text
+            | FORUM
+          //- li
+        //- ul
+      //- row
+    //- container
+  //- navbar-header
+  .steadybird
+    .container
+      #navbar.navbar-collapse.collapse
+        ul.nav.navbar-nav
+          li
+            a(href='#') Home
+          //- li
+          li
+            a(href='#') Files
+          //- li
+          li
+            a(href='#') Calendar
+          //- li
+        //- ul
+        ul.nav.navbar-nav.navbar-right
+          li.navbar-text
+            | Martin Conway
+          //- li
+          li.dropdown
+            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+              i.fa.fa-cog
+            //- a
+            ul.dropdown-menu
+              li
+                a(href='#') Manage Account
+              //- li
+              li
+                a(href='#') Logout
+              //- li
+            //- ul
+          //- li
+          li.navbar-text
+            i.fa.fa-bell
+            span.badge 17
+          //- li
+        //- ul
+      //- .nav-collapse
+    //- container
+  //- steadybird
+//- nav

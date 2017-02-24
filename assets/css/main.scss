@@ -231,11 +231,35 @@ h2 {
   }
 }
 
+.btn-more-options {
+  button {
+    border: 0;
+    color: gray;
+    padding: 5px;
+    line-height: 0;
+    font-size: 14px;
+    border-radius: 2px;
+  }
+  ul {
+    border-radius: 2px;
+    padding: 0;
+  }
+  ul li {
+    a {
+      font-size: 11px;
+      padding: 5px 10px;
+    }
+  }
+}
+
 .media {
   & {
-
+    overflow: visible;
   }
   .media-body {
+    & {
+      overflow: visible;
+    }
     .post-content {
       margin-top: 5px;
     }
@@ -250,10 +274,10 @@ h2 {
     border-left: 2px solid #ddd;
     padding-left: 8px;
     margin-top: 5px;
-    .reply {
-      border: 0;
-      background: none;
-    }
+    // .reply {
+    //   border: 0;
+    //   background: none;
+    // }
   }
 }
 .card .reply {

@@ -6,8 +6,8 @@ var browserSync   = require('browser-sync').create();
 var autoprefixer  = require('gulp-autoprefixer');
 var exec          = require('child_process').exec;
 
-var root  = './';
-var dir   = 'public'; // you may change this.
+var root  = '../ttstatic.github.io/';
+var dir   = 'bcforum'; // you may change this.
 var paths = {
   pug: ['./*.pug', '!**[^_]/*.pug'],
   scss: 'assets/css/**/*.scss'

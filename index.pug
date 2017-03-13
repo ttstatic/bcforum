@@ -116,9 +116,17 @@ block content
                   .form-group
                     textarea.form-control(placeholder='Write something...', rows="5")
                   //- form-group
+                  .clearfix
+                  #fileUploadPost.collapse
+                    .drop-area
+                      i.fa.fa-cloud-upload.fa-3x
+                      br
+                      span Drop files here to upload...
+                    //- drop-area
+                  //- fileUploadPost
                   .buttons
                     span.icons
-                      a.pull-left(href='', data-toggle='tooltip', data-placement='auto', title='Attach File')
+                      a.pull-left(href='#fileUploadPost', data-toggle='collapse')
                         i.fa.fa-paperclip
                       //- a
                     //- icons
@@ -232,6 +240,43 @@ block content
                 .post-content
                   | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
                 //- post-content
+                .attachments
+                  button.btn.btn-primary(type='button')
+                    .filename
+                      i.fa.fa-paperclip
+                      | 8432v923s3h3l5n6k2l1j45mj12
+                    //- filename
+                    span.badge
+                      a(href='')
+                        i.fa.fa-download
+                      //- a
+                    //- span
+                    //- | &nbsp;
+                    //- span.badge
+                    //-   a(href='')
+                    //-     i.fa.fa-eye
+                    //-   //- a
+                    //- //- span
+                  //- button
+                  button.btn.btn-primary(type='button')
+                    .filename
+                      i.fa.fa-paperclip
+                      | 8432v923s3h3l5n6k2l1j45mj12
+                    //- filename
+                    span.badge
+                      a(href='')
+                        i.fa.fa-download
+                      //- a
+                    //- span
+                    //- | &nbsp;
+                    //- span.badge
+                    //-   a(href='')
+                    //-     i.fa.fa-eye
+                    //-   //- a
+                    //- //- span
+                  //- button
+                //- attachments
+                .clearfix
                 .replies
                   .media
                     .media-left
@@ -286,9 +331,9 @@ block content
                 //- replies
               //- media-body
             //- media
-            a.bookmark(href='', data-toggle='tooltip', data-placement='auto', title='bookmark this post')
-              i.fa.fa-bookmark
-            //- bookmark
+            //- a.bookmark(href='', data-toggle='tooltip', data-placement='auto', title='bookmark this post')
+            //-   i.fa.fa-bookmark
+            //- //- bookmark
           //- card-padding
           .reply
             span.controls
@@ -318,7 +363,10 @@ block content
             //- span
             input(type='text', placeholder='Write a reply...')
             span.actions
-              i.fa.fa-paperclip(data-toggle='tooltip', data-placement='auto', title='Attach File')
+              a(href='')
+                i.fa.fa-paperclip(data-toggle='tooltip', data-placement='auto', title='Attach File')
+              //- a
+              a.send-reply(href='') Send
             //- span
           //- reply
         //- card
@@ -345,6 +393,27 @@ block content
                       //- a
                     //- media-left
                     .media-body
+                      .btn-group.btn-more-options.pull-right
+                        button.btn.btn-default.btn-sm.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                          i.fa.fa-ellipsis-v
+                        ul.dropdown-menu.pull-right
+                          li
+                            a(href='')
+                              i.fa.fa-pencil
+                              | &nbsp;Edit
+                          //- li
+                          li
+                            a(href='')
+                              i.fa.fa-trash
+                              | &nbsp;Delete
+                          //- li
+                          li
+                            a(href='')
+                              i.fa.fa-exclamation-triangle
+                              | &nbsp;Report Abusive
+                          //- li
+                        //- ul
+                      //- btn-group
                       strong.media-heading Rodan Luzuriaga
                       br
                       span.votes
@@ -370,9 +439,9 @@ block content
                 //- replies
               //- media-body
             //- media
-            a.bookmark(href='', data-toggle='tooltip', data-placement='auto', title='bookmark this post')
-              i.fa.fa-bookmark
-            //- bookmark
+            //- a.bookmark(href='', data-toggle='tooltip', data-placement='auto', title='bookmark this post')
+            //-   i.fa.fa-bookmark
+            //- //- bookmark
           //- card-padding
           .reply
             span.controls
@@ -402,7 +471,10 @@ block content
             //- span
             input(type='text', placeholder='Write a reply...')
             span.actions
-              i.fa.fa-paperclip(data-toggle='tooltip', data-placement='auto', title='Attach File')
+              a(href='')
+                i.fa.fa-paperclip(data-toggle='tooltip', data-placement='auto', title='Attach File')
+              //- a
+              a.send-reply(href='') Send
             //- span
           //- reply
         //- card
@@ -429,6 +501,27 @@ block content
                       //- a
                     //- media-left
                     .media-body
+                      .btn-group.btn-more-options.pull-right
+                        button.btn.btn-default.btn-sm.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                          i.fa.fa-ellipsis-v
+                        ul.dropdown-menu.pull-right
+                          li
+                            a(href='')
+                              i.fa.fa-pencil
+                              | &nbsp;Edit
+                          //- li
+                          li
+                            a(href='')
+                              i.fa.fa-trash
+                              | &nbsp;Delete
+                          //- li
+                          li
+                            a(href='')
+                              i.fa.fa-exclamation-triangle
+                              | &nbsp;Report Abusive
+                          //- li
+                        //- ul
+                      //- btn-group
                       strong.media-heading Rodan Luzuriaga
                       br
                       span.votes
@@ -454,9 +547,9 @@ block content
                 //- replies
               //- media-body
             //- media
-            a.bookmark(href='', data-toggle='tooltip', data-placement='auto', title='bookmark this post')
-              i.fa.fa-bookmark
-            //- bookmark
+            //- a.bookmark(href='', data-toggle='tooltip', data-placement='auto', title='bookmark this post')
+            //-   i.fa.fa-bookmark
+            //- //- bookmark
           //- card-padding
           .reply
             span.controls
@@ -486,7 +579,10 @@ block content
             //- span
             input(type='text', placeholder='Write a reply...')
             span.actions
-              i.fa.fa-paperclip(data-toggle='tooltip', data-placement='auto', title='Attach File')
+              a(href='')
+                i.fa.fa-paperclip(data-toggle='tooltip', data-placement='auto', title='Attach File')
+              //- a
+              a.send-reply(href='') Send
             //- span
           //- reply
         //- card

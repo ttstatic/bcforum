@@ -274,6 +274,7 @@ h2 {
     border-left: 2px solid #ddd;
     padding-left: 8px;
     margin-top: 5px;
+    font-size: 12px;
     // .reply {
     //   border: 0;
     //   background: none;
@@ -296,7 +297,7 @@ h2 {
     display: block;
     padding: 0 5px 5px;
     a {
-      font-size: 12px;
+      font-size: 11px;
     }
     .links {
       float: right;
@@ -311,7 +312,23 @@ h2 {
   .actions {
     position: absolute;
     bottom: 9px;
-    right: 15px;
+    right: 10px;
+    a {
+      &.send-reply {
+        font-size: 12px;
+        padding: 2px 5px;
+        border-radius: 3px;
+        margin-left: 8px;
+        color: inherit;
+        // background: lighten(#425287, 5%);
+        background: #eee;
+        font-weight: 600;
+        text-decoration: none;
+        &:hover {
+          background: darken(#eee, 5%);
+        }
+      }
+    }
   }
 }
 .search-dis {
@@ -471,4 +488,30 @@ footer {
   font-weight: lighter;
   background: #192E71;
   color: white;
+}
+
+
+.attachments {
+  & {
+    margin: 5px 0;
+  }
+  button {
+    & {
+      margin-right: 5px;
+    }
+    .filename {
+      display: inline-block;
+      vertical-align: middle;
+      width: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-right: 5px;
+      i {
+        margin-right: 5px;
+      }
+    }
+    .badge {
+      margin-left: 5px;
+    }
+  }
 }
